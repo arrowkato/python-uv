@@ -32,7 +32,6 @@ exclude = [
     ".ruff_cache",
 ]
 ignore = []
-defineConstant = { DEBUG = true }
 
 reportMissingImports = "error"
 
