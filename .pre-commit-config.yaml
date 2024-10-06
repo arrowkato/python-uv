@@ -21,3 +21,12 @@ repos:
         language: system
         types: ["dockerfile"]
         entry: hadolint
+
+  - repo: local
+    hooks:
+      - id: pyright_on_uv
+        name: Pyright on uv
+        description: "Run Pyright for static type checking on uv"
+        entry: uv run pyright
+        language: system
+        types: [python]
