@@ -24,9 +24,10 @@ repos:
 
   - repo: local
     hooks:
-      - id: pyright_on_uv
-        name: Pyright on uv
-        description: "Run Pyright for static type checking on uv"
-        entry: uv run pyright
-        language: system
-        types: [python]
+      - id: pyright
+        name: Pyright
+        description: "Run Pyright for static type checking"
+        entry: pyright
+        language: python
+        types: [python, jupyter]
+        additional_dependencies: ['pyright>=1.1']
