@@ -2,20 +2,75 @@
 name = "default"
 version = "0.1.0"
 description = "This repository contains configurations to set up a Python development environment using VSCode's Dev Container feature. The environment includes uv and Ruff."
-authors = [
-    {name = "a5chin", email = "a5chin.origin+contact@gmail.com"}
-]
-maintainers = [
-    {name = "a5chin", email = "a5chin.origin+contact@gmail.com"}
-]
+authors = [{ name = "a5chin", email = "a5chin.origin+contact@gmail.com" }]
+maintainers = [{ name = "a5chin", email = "a5chin.origin+contact@gmail.com" }]
 requires-python = ">=3.9"
 readme = "README.md"
-license = {file = "LICENSE"}
-dependencies = []
+license = { file = "LICENSE" }
+dependencies = [
+    "langchain-openai>=0.2.2",
+    "langchain>=0.3.2",
+    "python-dotenv>=1.0.1",
+]
 
 [tool.uv]
 dev-dependencies = [
     "pytest>=8.3.2",
     "pre-commit>=3.8.0",
     "ruff>=0.6.3",
+    "pyright>=1.1.383",
 ]
+
+
+[tool.pyright]
+# ref  https://microsoft.github.io/pyright/#/configuration
+## Environment Options ##
+include = ["python_uv", "tests"]
+exclude = [
+    "**/__pycache__",
+    "python_uv/sample*.py",
+    ".mypy_cache",
+    ".pytest_cache",
+    ".ruff_cache",
+]
+ignore = []
+pythonVersion = "3.12"
+pythonPlatform = "Linux"
+
+## Type Evaluation Settings ##
+strictListInference = true
+strictDictionaryInference = true
+strictSetInference = true
+deprecateTypingAliases = true
+
+## Type Check Diagnostics Settings ##
+typeCheckingMode = "standard"
+
+## Type Check Rule Overrides ##
+# Settings that are closer to "strict" than "standard"
+reportMissingImports = "error"
+reportUnknownParameterType = "error"
+reportWildcardImportFromLibrary = "error"
+reportConstantRedefinition = "error"
+reportDuplicateImport = "error"
+reportMatchNotExhaustive = "warning"
+reportMissingParameterType = "warning"
+reportMissingTypeArgument = "error"
+reportPrivateUsage = "error"
+reportUnknownMemberType = "warning"
+reportUnnecessaryCast = "warning"
+reportUnnecessaryComparison = "warning"
+reportUnnecessaryContains = "warning"
+reportUnusedImport = "error"
+reportUnusedFunction = "warning"
+reportUnusedVariable = "warning"
+
+## Execution Environment Options ##
+# There is no setting, because the settings listed in the "Environment Options" section
+# will be used in all environments.
+
+# [tool.ruff]
+# [tool.ruff.lint]
+# [tool.ruff.format]
+# etc
+# see ruff.toml file

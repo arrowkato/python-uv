@@ -21,3 +21,13 @@ repos:
         language: system
         types: ["dockerfile"]
         entry: hadolint
+
+  - repo: local
+    hooks:
+      - id: pyright
+        name: Pyright
+        description: "Run Pyright for static type checking"
+        entry: pyright
+        language: python
+        types: [python, jupyter]
+        additional_dependencies: ['pyright>=1.1']
