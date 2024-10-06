@@ -83,5 +83,7 @@ line-ending = "auto"
 
 
 [lint.per-file-ignores]
+# allow __init__.py to be empty
+"__init__.py" = ["D104"]
 # Test codes should be more relaxed
 "tests/**.py" = ["D103", "S101", "PLR2004"]
