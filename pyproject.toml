@@ -41,6 +41,7 @@ pythonPlatform = "Linux"
 reportMissingImports = "error"
 
 ## Type Check Diagnostics Settings ##
+typeCheckingMode = "standard"
 
 ## Type Check Rule Overrides ##
 
