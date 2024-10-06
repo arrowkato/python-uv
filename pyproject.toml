@@ -38,14 +38,36 @@ pythonVersion = "3.12"
 pythonPlatform = "Linux"
 
 ## Type Evaluation Settings ##
-reportMissingImports = "error"
+strictListInference = true
+strictDictionaryInference = true
+strictSetInference = true
+deprecateTypingAliases = true
 
 ## Type Check Diagnostics Settings ##
 typeCheckingMode = "standard"
 
 ## Type Check Rule Overrides ##
+# Settings that are closer to "strict" than "standard"
+reportMissingImports = "error"
+reportUnknownParameterType = "error"
+reportWildcardImportFromLibrary = "error"
+reportConstantRedefinition = "error"
+reportDuplicateImport = "error"
+reportMatchNotExhaustive = "warning"
+reportMissingParameterType = "warning"
+reportMissingTypeArgument = "error"
+reportPrivateUsage = "error"
+reportUnknownMemberType = "warning"
+reportUnnecessaryCast = "warning"
+reportUnnecessaryComparison = "warning"
+reportUnnecessaryContains = "warning"
+reportUnusedImport = "error"
+reportUnusedFunction = "warning"
+reportUnusedVariable = "warning"
 
 ## Execution Environment Options ##
+# There is no setting, because the settings listed in the "Environment Options" section
+# will be used in all environments.
 
 # [tool.ruff]
 # [tool.ruff.lint]
