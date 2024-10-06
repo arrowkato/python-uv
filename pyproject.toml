@@ -23,6 +23,8 @@ dev-dependencies = [
 
 
 [tool.pyright]
+# ref  https://microsoft.github.io/pyright/#/configuration
+## Environment Options ##
 include = ["python_uv", "tests"]
 exclude = [
     "**/__pycache__",
@@ -32,12 +34,17 @@ exclude = [
     ".ruff_cache",
 ]
 ignore = []
-
-reportMissingImports = "error"
-
 pythonVersion = "3.12"
 pythonPlatform = "Linux"
 
+## Type Evaluation Settings ##
+reportMissingImports = "error"
+
+## Type Check Diagnostics Settings ##
+
+## Type Check Rule Overrides ##
+
+## Execution Environment Options ##
 
 # [tool.ruff]
 # [tool.ruff.lint]
