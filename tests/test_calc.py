@@ -3,7 +3,7 @@ import pytest
 from python_uv.calc import add
 
 
-@pytest.mark.unit_test()
+@pytest.mark.unit_test
 @pytest.mark.parametrize(
     ("a", "b", "expected"),
     [
@@ -18,7 +18,7 @@ def test_add_correct(a: int, b: int, expected: int) -> None:
     assert add(a, b) == expected
 
 
-@pytest.mark.unit_test()
+@pytest.mark.unit_test
 @pytest.mark.parametrize(
     ("a", "b"),
     [

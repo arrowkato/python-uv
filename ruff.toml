@@ -72,7 +72,7 @@ dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
 # allow __init__.py to be empty
 "__init__.py" = ["D104"]
 # Test codes should be more relaxed
-"tests/**.py" = ["D103", "S101", "PLR2004"]
+"tests/**.py" = ["D103", "S101", "PLR2004", "PT023"]
 
 [format]
 # Like Black, use double quotes for strings.
